@@ -22,6 +22,7 @@ struct empleado
 void cargar_empleados(empleado[3]);
 void mostrar_empleados(empleado[3]);
 void buscar_empleado(empleado[3]);
+void actualizar_sueldo(empleado[3]);
 int main(int argc, char *argv[]) {
 	struct empleado e[3];
 	char op=' ',cass=' ';
@@ -46,12 +47,10 @@ int main(int argc, char *argv[]) {
 		case 'c':
 		case 'C':
 			buscar_empleado(e);
-			
 			break;
 		case 'd':
 		case 'D':
-			
-			
+		actualizar_sueldo(e);
 			break;
 		case 'e':
 		case 'E':
@@ -111,4 +110,7 @@ void buscar_empleado(empleado e[3]){
 			cout<<"\nAntiguedad: "<<e[i].antiguedad<<"\n";
 		}
 	}
+}
+void actualizar_sueldo(empleado e[3]){
+	printf("¿Que sueldo desea actualizar?\n");
 }
